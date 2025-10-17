@@ -47,6 +47,9 @@ USER appuser
 # Update PATH for appuser
 ENV PATH=/home/appuser/.local/bin:$PATH
 
+# Set default PORT
+ENV PORT=8000
+
 # Expose port
 EXPOSE 8000
 
