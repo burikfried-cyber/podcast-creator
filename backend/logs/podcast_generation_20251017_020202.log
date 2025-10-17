@@ -1,0 +1,178 @@
+02:02:02 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-17T01:02:02.816980Z"}
+02:02:02 | INFO     | app.core.file_logging          | {"event": "  APPLICATION STARTUP", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-17T01:02:02.849696Z"}
+02:02:02 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-17T01:02:02.977857Z"}
+02:02:03 | INFO     | app.main                       | {"version": "1.0.0", "event": "Starting application", "logger": "app.main", "level": "info", "timestamp": "2025-10-17T01:02:03.133070Z"}
+02:02:36 | INFO     | sqlalchemy.engine.Engine       | select pg_catalog.version()
+02:02:36 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+02:02:39 | INFO     | sqlalchemy.engine.Engine       | select current_schema()
+02:02:39 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+02:02:41 | INFO     | sqlalchemy.engine.Engine       | show standard_conforming_strings
+02:02:41 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+02:02:44 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:02:45 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:45 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.03523s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:46 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:46 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.656s ago] ('user_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:47 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:47 | INFO     | sqlalchemy.engine.Engine       | [cached since 2.153s ago] ('user_behavior', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:48 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:48 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.814s ago] ('content_metadata', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:49 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:49 | INFO     | sqlalchemy.engine.Engine       | [cached since 4.126s ago] ('user_topic_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:49 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:49 | INFO     | sqlalchemy.engine.Engine       | [cached since 4.781s ago] ('user_depth_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:50 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:50 | INFO     | sqlalchemy.engine.Engine       | [cached since 5.327s ago] ('user_surprise_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:51 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:51 | INFO     | sqlalchemy.engine.Engine       | [cached since 6.427s ago] ('user_contextual_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:53 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:53 | INFO     | sqlalchemy.engine.Engine       | [cached since 7.949s ago] ('user_learning_states', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:53 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:53 | INFO     | sqlalchemy.engine.Engine       | [cached since 8.559s ago] ('user_behavioral_signals', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:54 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 9.185s ago] ('user_cold_start_data', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:54 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+02:02:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 9.68s ago] ('podcasts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+02:02:55 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+02:02:56 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.61339s] ('podcaststatus', 'pg_catalog')
+02:02:56 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+02:02:57 | INFO     | app.main                       | {"event": "Database initialized", "logger": "app.main", "level": "info", "timestamp": "2025-10-17T01:02:57.401023Z"}
+02:03:03 | WARNING  | app.core.cache                 | {"event": "Redis not available, using in-memory cache fallback: Error connecting to localhost:6379. Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379).", "logger": "app.core.cache", "level": "warning", "timestamp": "2025-10-17T01:03:03.222331Z"}
+02:03:03 | INFO     | app.main                       | {"event": "Redis connected", "logger": "app.main", "level": "info", "timestamp": "2025-10-17T01:03:03.237981Z"}
+02:04:07 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/me", "status_code": 200, "duration_ms": 173.93, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:07.312508Z"}
+02:04:07 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/preferences", "status_code": 200, "duration_ms": 173.83, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:07.318038Z"}
+02:04:07 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/me", "status_code": 200, "duration_ms": 135.45, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:07.365383Z"}
+02:04:07 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/preferences", "status_code": 200, "duration_ms": 167.8, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:07.397738Z"}
+02:04:08 | WARNING  | app.core.security              | {"event": "Token decode error: Signature has expired.", "logger": "app.core.security", "level": "warning", "timestamp": "2025-10-17T01:04:08.037708Z"}
+02:04:08 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/auth/me", "status_code": 401, "duration_ms": 660.31, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:08.171520Z"}
+02:04:08 | WARNING  | app.core.security              | {"event": "Token decode error: Signature has expired.", "logger": "app.core.security", "level": "warning", "timestamp": "2025-10-17T01:04:08.235226Z"}
+02:04:08 | WARNING  | app.core.security              | {"event": "Token decode error: Signature has expired.", "logger": "app.core.security", "level": "warning", "timestamp": "2025-10-17T01:04:08.314169Z"}
+02:04:08 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/preferences", "status_code": 401, "duration_ms": 145.45, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:08.365026Z"}
+02:04:08 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/auth/me", "status_code": 401, "duration_ms": 155.53, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:08.375111Z"}
+02:04:08 | WARNING  | app.core.security              | {"event": "Token decode error: Signature has expired.", "logger": "app.core.security", "level": "warning", "timestamp": "2025-10-17T01:04:08.596673Z"}
+02:04:08 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 220.13, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:08.801179Z"}
+02:04:08 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/preferences", "status_code": 401, "duration_ms": 252.87, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:08.833915Z"}
+02:04:09 | INFO     | app.api.v1.endpoints.auth      | {"event": "Token refreshed", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-17T01:04:09.145669Z"}
+02:04:09 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 331.52, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:09.259742Z"}
+02:04:09 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 379.66, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:09.307890Z"}
+02:04:09 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 505.03, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:09.385986Z"}
+02:04:09 | INFO     | app.api.v1.endpoints.auth      | {"event": "Token refreshed", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-17T01:04:09.433804Z"}
+02:04:09 | INFO     | app.api.v1.endpoints.auth      | {"event": "Token refreshed", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-17T01:04:09.467607Z"}
+02:04:09 | INFO     | app.api.v1.endpoints.auth      | {"event": "Token refreshed", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-17T01:04:09.520415Z"}
+02:04:09 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 161.07, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:09.562682Z"}
+02:04:09 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 213.75, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:09.615360Z"}
+02:04:09 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/refresh", "status_code": 200, "duration_ms": 285.32, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:09.719127Z"}
+02:04:14 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:15 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:04:15 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.01227s] ('dabb32c2-968d-4695-b097-8d33814bb5ec',)
+02:04:15 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/login", "status_code": 200, "duration_ms": 3.25, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:04:15.670873Z"}
+02:04:18 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:19 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/auth/me", "status_code": 401, "duration_ms": 10158.98, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:19.972535Z"}
+02:04:21 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:21 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:04:21 | INFO     | sqlalchemy.engine.Engine       | [cached since 6.479s ago] ('dabb32c2-968d-4695-b097-8d33814bb5ec',)
+02:04:23 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:23 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+02:04:23 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.01537s] ('burikfried@gmail.com',)
+02:04:24 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:24 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/preferences", "status_code": 401, "duration_ms": 14696.42, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:24.589915Z"}
+02:04:24 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:24 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:04:24 | INFO     | sqlalchemy.engine.Engine       | [cached since 9.837s ago] ('dabb32c2-968d-4695-b097-8d33814bb5ec',)
+02:04:24 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:25 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:25 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:04:25 | INFO     | sqlalchemy.engine.Engine       | [cached since 10.3s ago] ('dabb32c2-968d-4695-b097-8d33814bb5ec',)
+02:04:25 | WARNING  | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 401, "duration_ms": 3815.22, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:25.353103Z"}
+02:04:25 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:25 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+02:04:25 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.913s ago] ('burikfried@gmail.com',)
+02:04:26 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:26 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:26 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/preferences", "status_code": 401, "duration_ms": 10869.32, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:26.289567Z"}
+02:04:26 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/auth/me", "status_code": 401, "duration_ms": 11060.35, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:26.480605Z"}
+02:04:26 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:26 | WARNING  | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 401, "duration_ms": 11210.49, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:26.934793Z"}
+02:04:27 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:27 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:04:27 | INFO     | sqlalchemy.engine.Engine       | [cached since 12.06s ago] ('dabb32c2-968d-4695-b097-8d33814bb5ec',)
+02:04:27 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:04:27 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:04:27 | INFO     | sqlalchemy.engine.Engine       | [cached since 12.11s ago] ('dabb32c2-968d-4695-b097-8d33814bb5ec',)
+02:04:28 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:29 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:04:29 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/auth/me", "status_code": 401, "duration_ms": 2911.36, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:29.412322Z"}
+02:04:29 | WARNING  | api.request                    | {"method": "GET", "path": "/api/v1/preferences", "status_code": 401, "duration_ms": 3471.55, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:04:29.787581Z"}
+02:05:17 | INFO     | api.request                    | {"method": "OPTIONS", "path": "/api/v1/auth/register", "status_code": 200, "duration_ms": 3.52, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:05:17.428147Z"}
+02:05:18 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:05:18 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+02:05:18 | INFO     | sqlalchemy.engine.Engine       | [cached since 54.45s ago] ('burikfried@gmail.com',)
+02:05:19 | INFO     | sqlalchemy.engine.Engine       | INSERT INTO users (id, email, password_hash, tier, is_active, is_verified, created_at, updated_at, last_login) VALUES ($1::UUID, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::TIMESTAMP WITHOUT TIME ZONE, $8::TIMESTAMP WITHOUT TIME ZONE, $9::TIMESTAMP WITHOUT TIME ZONE)
+02:05:19 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.02297s] (UUID('efb2ce5c-bb18-4048-b9b5-01f25fa56076'), 'burikfried@gmail.com', '$2b$12$ACrRRNPJv0bpI.qT7MI1Veo1tcpff1VCZxoG3URQFJMyxgPzmuUHC', 'free', True, False, datetime.datetime(2025, 10, 17, 1, 5, 19, 692392), datetime.datetime(2025, 10, 17, 1, 5, 19, 692392), None)
+02:05:21 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+02:05:24 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:05:24 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+02:05:24 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00287s] (UUID('efb2ce5c-bb18-4048-b9b5-01f25fa56076'),)
+02:05:24 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:05:25 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+02:05:25 | INFO     | sqlalchemy.engine.Engine       | [cached since 61.1s ago] ('burikfried@gmail.com',)
+02:05:25 | INFO     | app.api.v1.endpoints.auth      | {"user_id": "efb2ce5c-bb18-4048-b9b5-01f25fa56076", "email": "burikfried@gmail.com", "event": "User registered", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-17T01:05:25.364151Z"}
+02:05:25 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+02:05:25 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/register", "status_code": 201, "duration_ms": 8036.19, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-17T01:05:25.476869Z"}
+02:05:25 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:05:26 | WARNING  | api.request                    | {"method": "POST", "path": "/api/v1/auth/register", "status_code": 400, "duration_ms": 3764.86, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:05:26.524643Z"}
+02:05:38 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+02:05:38 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+02:05:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 74.13s ago] ('burikfried@gmail.com',)
+02:05:40 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+02:05:42 | WARNING  | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 401, "duration_ms": 7031.97, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-17T01:05:42.306138Z"}

@@ -1,0 +1,259 @@
+15:44:46 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:44:46.917649Z"}
+15:44:46 | INFO     | app.core.file_logging          | {"event": "  APPLICATION STARTUP", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:44:46.918663Z"}
+15:44:46 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:44:46.918663Z"}
+15:44:47 | INFO     | app.main                       | {"version": "1.0.0", "event": "Starting application", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:44:47.000886Z"}
+15:44:49 | INFO     | sqlalchemy.engine.Engine       | select pg_catalog.version()
+15:44:49 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+15:44:50 | INFO     | sqlalchemy.engine.Engine       | select current_schema()
+15:44:50 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+15:44:50 | INFO     | sqlalchemy.engine.Engine       | show standard_conforming_strings
+15:44:50 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00082s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.504s ago] ('user_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:51 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.6672s ago] ('user_behavior', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:52 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:52 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.83s ago] ('content_metadata', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:52 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:52 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.02s ago] ('user_topic_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:52 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.003s ago] ('user_depth_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.168s ago] ('user_surprise_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.331s ago] ('user_contextual_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.494s ago] ('user_learning_states', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.657s ago] ('user_behavioral_signals', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.82s ago] ('user_cold_start_data', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | [cached since 3.985s ago] ('podcasts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00061s] ('podcaststatus', 'pg_catalog')
+15:44:55 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:44:55 | INFO     | app.main                       | {"event": "Database initialized", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:44:55.910900Z"}
+15:45:00 | WARNING  | app.core.cache                 | {"event": "Redis not available, using in-memory cache fallback: Error connecting to localhost:6379. Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379).", "logger": "app.core.cache", "level": "warning", "timestamp": "2025-10-16T14:45:00.134128Z"}
+15:45:00 | INFO     | app.main                       | {"event": "Redis connected", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:45:00.134128Z"}
+15:45:00 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:45:00 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+15:45:00 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00061s] ('test@example.com',)
+15:45:01 | INFO     | sqlalchemy.engine.Engine       | UPDATE users SET updated_at=$1::TIMESTAMP WITHOUT TIME ZONE, last_login=$2::TIMESTAMP WITHOUT TIME ZONE WHERE users.id = $3::UUID
+15:45:01 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00065s] (datetime.datetime(2025, 10, 16, 14, 45, 1, 802007), datetime.datetime(2025, 10, 16, 14, 45, 1, 786841), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'))
+15:45:02 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:45:02 | INFO     | app.api.v1.endpoints.auth      | {"user_id": "b4afc2ed-cc0d-49e9-8084-1d14317cf546", "email": "test@example.com", "event": "User logged in", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-16T14:45:02.977382Z"}
+15:45:02 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 200, "duration_ms": 2833.5, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:45:02.987757Z"}
+15:45:04 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:45:04 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+15:45:04 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00045s] ('b4afc2ed-cc0d-49e9-8084-1d14317cf546',)
+15:45:06 | INFO     | app.services.content.llm_service | {"model": "sonar", "event": "LLM initialized with Perplexity", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:45:06.172855Z"}
+15:45:06 | INFO     | app.services.podcast_service   | {"user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "skip": 0, "limit": 20, "status_filter": null, "event": "listing_podcasts", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:45:06.283280Z"}
+15:45:06 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.script_content, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.user_id = $1::UUID ORDER BY podcasts.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+15:45:06 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00074s] (UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'), 20, 0)
+15:45:07 | INFO     | app.services.podcast_service   | {"count": 3, "event": "podcasts_listed", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:45:07.379696Z"}
+15:45:07 | INFO     | sqlalchemy.engine.Engine       | SELECT count(*) AS count_1 
+FROM podcasts 
+WHERE podcasts.user_id = $1::UUID
+15:45:07 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00060s] (UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'),)
+15:45:07 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET script_content=$1::VARCHAR, updated_at=$2::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $3::UUID
+15:45:07 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00077s] [(None, datetime.datetime(2025, 10, 16, 14, 45, 7, 762778), UUID('079ded5c-623f-4cda-9b77-b085e0016675')), (None, datetime.datetime(2025, 10, 16, 14, 45, 7, 762778), UUID('3c13f769-eeb5-4aee-afe0-328b1ccb68aa')), (None, datetime.datetime(2025, 10, 16, 14, 45, 7, 762778), UUID('fa3421d6-a957-4c03-acfe-dd803155e18b'))]
+15:45:07 | INFO     | api.request                    | {"method": "GET", "path": "/api/v1/podcasts/", "status_code": 200, "duration_ms": 3938.64, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:45:07.765780Z"}
+15:45:08 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:46:04 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:46:04 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+15:46:04 | INFO     | sqlalchemy.engine.Engine       | [cached since 63.36s ago] ('test@example.com',)
+15:46:04 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+15:46:04 | WARNING  | api.request                    | {"method": "POST", "path": "/api/v1/auth/register", "status_code": 400, "duration_ms": 1018.9, "event": "Request error", "logger": "api.request", "level": "warning", "timestamp": "2025-10-16T14:46:04.779622Z"}
+15:46:05 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:46:05 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+15:46:05 | INFO     | sqlalchemy.engine.Engine       | [cached since 64.35s ago] ('test@example.com',)
+15:46:06 | INFO     | sqlalchemy.engine.Engine       | UPDATE users SET updated_at=$1::TIMESTAMP WITHOUT TIME ZONE, last_login=$2::TIMESTAMP WITHOUT TIME ZONE WHERE users.id = $3::UUID
+15:46:06 | INFO     | sqlalchemy.engine.Engine       | [cached since 64.83s ago] (datetime.datetime(2025, 10, 16, 14, 46, 6, 628925), datetime.datetime(2025, 10, 16, 14, 46, 6, 627924), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'))
+15:46:06 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:46:06 | INFO     | app.api.v1.endpoints.auth      | {"user_id": "b4afc2ed-cc0d-49e9-8084-1d14317cf546", "email": "test@example.com", "event": "User logged in", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-16T14:46:06.962549Z"}
+15:46:06 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 200, "duration_ms": 2175.55, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:46:06.964686Z"}
+15:46:07 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:46:07 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+15:46:07 | INFO     | sqlalchemy.engine.Engine       | [cached since 63.14s ago] ('b4afc2ed-cc0d-49e9-8084-1d14317cf546',)
+15:46:07 | INFO     | app.api.v1.endpoints.podcasts  | {"user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "location": "Paris, France", "event": "podcast_generation_requested", "logger": "app.api.v1.endpoints.podcasts", "level": "info", "timestamp": "2025-10-16T14:46:07.793568Z"}
+15:46:08 | INFO     | sqlalchemy.engine.Engine       | INSERT INTO podcasts (id, user_id, location, podcast_type, status, progress_percentage, title, description, script_content, audio_url, duration_seconds, file_size_bytes, podcast_metadata, error_message, created_at, updated_at, completed_at) VALUES ($1::UUID, $2::UUID, $3::VARCHAR, $4::VARCHAR, $5::podcaststatus, $6::INTEGER, $7::VARCHAR, $8::VARCHAR, $9::VARCHAR, $10::VARCHAR, $11::INTEGER, $12::INTEGER, $13::JSON, $14::VARCHAR, $15::TIMESTAMP WITHOUT TIME ZONE, $16::TIMESTAMP WITHOUT TIME ZONE, $17::TIMESTAMP WITHOUT TIME ZONE)
+15:46:08 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00115s] (UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'), 'Paris, France', 'base', 'pending', 0, None, None, None, None, None, None, '{"surprise_tolerance": 2, "preferred_length": "medium"}', None, datetime.datetime(2025, 10, 16, 14, 46, 8, 23893), datetime.datetime(2025, 10, 16, 14, 46, 8, 23893), None)
+15:46:08 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:46:09 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:46:09 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.script_content, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.id = $1::UUID
+15:46:09 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00061s] (UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'),)
+15:46:09 | INFO     | app.services.podcast_service   | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "location": "Paris, France", "event": "podcast_created", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:46:09.526094Z"}
+15:46:09 | INFO     | app.api.v1.endpoints.podcasts  | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "event": "podcast_generation_started", "logger": "app.api.v1.endpoints.podcasts", "level": "info", "timestamp": "2025-10-16T14:46:09.527118Z"}
+15:46:09 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/podcasts/generate", "status_code": 202, "duration_ms": 2694.95, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:46:09.664511Z"}
+15:46:11 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:46:11 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.script_content, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.id = $1::UUID
+15:46:11 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00084s] (UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'),)
+15:46:13 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:13.306616Z"}
+15:46:13 | INFO     | app.core.file_logging          | {"event": "  PODCAST GENERATION: Paris, France", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:13.306616Z"}
+15:46:13 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:13.307614Z"}
+15:46:13 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET status=$1::podcaststatus, progress_percentage=$2::INTEGER, updated_at=$3::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $4::UUID
+15:46:13 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00078s] ('processing', 10, datetime.datetime(2025, 10, 16, 14, 46, 13, 310613), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:46:13 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:46:13 | INFO     | app.core.file_logging          | {"event": "STEP 1: Starting generation for Paris, France [STARTED]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:13.833664Z"}
+15:46:13 | INFO     | app.services.podcast_service   | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "location": "Paris, France", "event": "podcast_generation_started", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:46:13.833664Z"}
+15:46:13 | INFO     | app.core.file_logging          | {"event": "STEP 1: Gathering content from Wikipedia and Location services [RUNNING]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:13.834665Z"}
+15:46:13 | INFO     | app.services.podcast_service   | {"location": "Paris, France", "event": "gathering_content", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:46:13.834665Z"}
+15:46:13 | INFO     | app.services.content.wikipedia_service | {"location": "Paris, France", "event": "wikipedia_fetch_started", "logger": "app.services.content.wikipedia_service", "level": "info", "timestamp": "2025-10-16T14:46:13.834665Z"}
+15:46:53 | INFO     | app.services.content.wikipedia_service | {"location": "Paris, France", "title": "Paris", "content_length": 90135, "event": "wikipedia_fetch_complete", "logger": "app.services.content.wikipedia_service", "level": "info", "timestamp": "2025-10-16T14:46:53.725903Z"}
+15:46:53 | INFO     | app.services.content.location_service | {"location": "Paris, France", "event": "location_fetch_started", "logger": "app.services.content.location_service", "level": "info", "timestamp": "2025-10-16T14:46:53.725903Z"}
+15:46:55 | INFO     | app.services.content.location_service | {"location": "Paris, France", "display_name": "Paris, Ile-de-France, Metropolitan France, France", "event": "location_fetch_complete", "logger": "app.services.content.location_service", "level": "info", "timestamp": "2025-10-16T14:46:55.226435Z"}
+15:46:55 | INFO     | app.services.podcast_service   | {"location": "Paris, France", "wiki_title": "Paris", "facts_count": 7, "event": "content_gathered", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:46:55.227440Z"}
+15:46:55 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:46:55 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET progress_percentage=$1::INTEGER, updated_at=$2::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $3::UUID
+15:46:55 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00055s] (30, datetime.datetime(2025, 10, 16, 14, 46, 55, 928013), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:46:56 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:46:56 | INFO     | app.core.file_logging          | {"event": "STEP 1: Content gathering complete [DONE]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:56.658651Z"}
+15:46:56 | INFO     | app.core.file_logging          | {"event": "STEP 2: Generating podcast script with Perplexity AI [RUNNING]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:46:56.658651Z"}
+15:46:56 | INFO     | app.services.narrative.podcast_generator | {"content_id": "Paris, France", "podcast_type": "base_podcast", "event": "podcast_generation_started", "logger": "app.services.narrative.podcast_generator", "level": "info", "timestamp": "2025-10-16T14:46:56.659665Z"}
+15:46:56 | INFO     | app.services.narrative.narrative_engine | {"content_id": "Paris, France", "podcast_type": "base_podcast", "event": "narrative_construction_started", "logger": "app.services.narrative.narrative_engine", "level": "info", "timestamp": "2025-10-16T14:46:56.660662Z"}
+15:46:56 | INFO     | app.services.narrative.narrative_engine | {"location": "Paris, France", "event": "fetching_real_content", "logger": "app.services.narrative.narrative_engine", "level": "info", "timestamp": "2025-10-16T14:46:56.660662Z"}
+15:46:56 | INFO     | app.services.content.wikipedia_service | {"location": "Paris, France", "event": "wikipedia_fetch_started", "logger": "app.services.content.wikipedia_service", "level": "info", "timestamp": "2025-10-16T14:46:56.660662Z"}
+15:47:28 | INFO     | app.services.content.wikipedia_service | {"location": "Paris, France", "title": "Paris", "content_length": 90135, "event": "wikipedia_fetch_complete", "logger": "app.services.content.wikipedia_service", "level": "info", "timestamp": "2025-10-16T14:47:28.181129Z"}
+15:47:28 | INFO     | app.services.content.location_service | {"location": "Paris, France", "event": "location_fetch_started", "logger": "app.services.content.location_service", "level": "info", "timestamp": "2025-10-16T14:47:28.182132Z"}
+15:47:31 | INFO     | app.services.content.location_service | {"location": "Paris, France", "display_name": "Paris, Ile-de-France, Metropolitan France, France", "event": "location_fetch_complete", "logger": "app.services.content.location_service", "level": "info", "timestamp": "2025-10-16T14:47:31.078621Z"}
+15:47:31 | INFO     | app.services.narrative.narrative_engine | {"title": "Paris", "facts_count": 7, "event": "real_content_fetched", "logger": "app.services.narrative.narrative_engine", "level": "info", "timestamp": "2025-10-16T14:47:31.080146Z"}
+15:47:31 | INFO     | app.services.content.llm_service | {"narrative_type": "discovery_narrative", "event": "llm_generate_hook_called", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:47:31.088106Z"}
+15:47:31 | INFO     | app.services.content.llm_service | {"event": "generating_with_perplexity", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:47:31.088106Z"}
+15:47:49 | INFO     | httpx                          | HTTP Request: POST https://api.perplexity.ai/chat/completions "HTTP/1.1 200 OK"
+15:47:49 | INFO     | app.services.content.llm_service | {"length": 381, "event": "perplexity_generation_complete", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:47:49.932797Z"}
+15:47:49 | INFO     | app.services.content.llm_service | {"narrative_type": "discovery_narrative", "event": "llm_generate_conclusion_called", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:47:49.932797Z"}
+15:47:49 | INFO     | app.services.content.llm_service | {"event": "generating_with_perplexity", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:47:49.932797Z"}
+15:47:53 | INFO     | httpx                          | HTTP Request: POST https://api.perplexity.ai/chat/completions "HTTP/1.1 200 OK"
+15:47:53 | INFO     | app.services.content.llm_service | {"length": 406, "event": "perplexity_generation_complete", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:47:53.286021Z"}
+15:47:53 | INFO     | app.services.narrative.narrative_engine | {"content_id": "Paris, France", "engagement_score": 0.7949999999999999, "duration": 680.0, "event": "narrative_construction_complete", "logger": "app.services.narrative.narrative_engine", "level": "info", "timestamp": "2025-10-16T14:47:53.287022Z"}
+15:47:53 | INFO     | app.services.narrative.script_assembly | {"content_id": "Paris, France", "podcast_type": "base_podcast", "event": "script_assembly_started", "logger": "app.services.narrative.script_assembly", "level": "info", "timestamp": "2025-10-16T14:47:53.287022Z"}
+15:47:53 | INFO     | app.services.narrative.script_assembly | {"content_id": "Paris, France", "quality_score": 0.79725, "word_count": 197, "event": "script_assembly_complete", "logger": "app.services.narrative.script_assembly", "level": "info", "timestamp": "2025-10-16T14:47:53.720283Z"}
+15:47:53 | INFO     | app.services.narrative.quality_control | {"content_id": "Paris, France", "event": "quality_check_started", "logger": "app.services.narrative.quality_control", "level": "info", "timestamp": "2025-10-16T14:47:53.721794Z"}
+15:47:53 | INFO     | app.services.narrative.quality_control | {"content_id": "Paris, France", "overall_score": 0.4425, "passed": false, "event": "quality_check_complete", "logger": "app.services.narrative.quality_control", "level": "info", "timestamp": "2025-10-16T14:47:53.961173Z"}
+15:47:53 | WARNING  | app.services.narrative.podcast_generator | {"content_id": "Paris, France", "issues": ["Unverified claim: Whether you're a seasoned traveler or planning your first visit, remember that Paris is a city that ..."], "event": "quality_check_failed", "logger": "app.services.narrative.podcast_generator", "level": "warning", "timestamp": "2025-10-16T14:47:53.964107Z"}
+15:47:53 | INFO     | app.services.narrative.podcast_generator | {"content_id": "Paris, France", "quality_passed": false, "script_length": 1367, "event": "podcast_generation_complete", "logger": "app.services.narrative.podcast_generator", "level": "info", "timestamp": "2025-10-16T14:47:53.966571Z"}
+15:47:54 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:47:54 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET progress_percentage=$1::INTEGER, updated_at=$2::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $3::UUID
+15:47:54 | INFO     | sqlalchemy.engine.Engine       | [cached since 58.58s ago] (60, datetime.datetime(2025, 10, 16, 14, 47, 54, 510690), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:47:54 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:47:55 | INFO     | app.core.file_logging          | {"event": "STEP 2: Script generation complete [DONE]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:55.007152Z"}
+15:47:55 | INFO     | app.core.file_logging          | {"event": "STEP 3: Extracting script details and metadata [RUNNING]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:55.008152Z"}
+15:47:55 | INFO     | app.services.podcast_service   | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "event": "extracting_script_details", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:47:55.008152Z"}
+15:47:55 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:47:55 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET progress_percentage=$1::INTEGER, title=$2::VARCHAR, description=$3::VARCHAR, script_content=$4::VARCHAR, duration_seconds=$5::INTEGER, podcast_metadata=$6::JSON, updated_at=$7::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $8::UUID
+15:47:55 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00160s] (70, 'Discover Paris, France', 'An engaging podcast exploring the fascinating stories and secrets of Paris, France', "Imagine walking the streets where kings tore down city walls to build grand boulevards, and where a cathedral’s flames once threatened to erase centu ... (1069 characters truncated) ... invites discovery and promises new surprises around every corner. Until next time, stay curious and keep exploring the wonders of this timeless city.", 680.0, '{"surprise_tolerance": 2, "preferred_length": "medium", "quality_score": 0.4425, "word_count": 197, "generation_metadata": {"content_id": "Paris, France", "podcast_type": "base_podcast", "duration_seconds": 680.0, "quality_score": 0.4425}}', datetime.datetime(2025, 10, 16, 14, 47, 55, 505612), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:47:56 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:47:56 | INFO     | app.core.file_logging          | {"event": "STEP 3: Script extracted: Discover Paris, France [DONE]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:56.192881Z"}
+15:47:56 | INFO     | app.services.podcast_service   | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "title": "Discover Paris, France", "event": "script_details_extracted", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:47:56.193888Z"}
+15:47:56 | INFO     | app.core.file_logging          | {"event": "STEP 4: Preparing audio generation (skipped for now) [RUNNING]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:56.193888Z"}
+15:47:56 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:47:56 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET progress_percentage=$1::INTEGER, updated_at=$2::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $3::UUID
+15:47:56 | INFO     | sqlalchemy.engine.Engine       | [cached since 60.76s ago] (90, datetime.datetime(2025, 10, 16, 14, 47, 56, 691340), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:47:57 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:47:57 | INFO     | app.core.file_logging          | {"event": "STEP 4: Audio preparation complete [DONE]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:57.262951Z"}
+15:47:57 | INFO     | app.core.file_logging          | {"event": "STEP 5: Finalizing podcast [RUNNING]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:57.262951Z"}
+15:47:57 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:47:57 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET status=$1::podcaststatus, progress_percentage=$2::INTEGER, updated_at=$3::TIMESTAMP WITHOUT TIME ZONE, completed_at=$4::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $5::UUID
+15:47:57 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00073s] ('completed', 100, datetime.datetime(2025, 10, 16, 14, 47, 57, 761630), datetime.datetime(2025, 10, 16, 14, 47, 57, 263957), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:47:58 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:47:58 | INFO     | app.core.file_logging          | {"event": "STEP 5: Podcast generation COMPLETE! [DONE]", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:58.434861Z"}
+15:47:58 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:58.434861Z"}
+15:47:58 | INFO     | app.core.file_logging          | {"event": "  SUCCESS: Discover Paris, France", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:58.434861Z"}
+15:47:58 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:47:58.435877Z"}
+15:47:58 | INFO     | app.services.podcast_service   | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "duration": 680.0, "title": "Discover Paris, France", "event": "podcast_generation_completed", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:47:58.435877Z"}
+15:47:58 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:47:59 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:47:59 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+15:47:59 | INFO     | sqlalchemy.engine.Engine       | [cached since 175.3s ago] ('b4afc2ed-cc0d-49e9-8084-1d14317cf546',)
+15:48:00 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.script_content, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.id = $1::UUID AND podcasts.user_id = $2::UUID
+15:48:00 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00068s] (UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'))
+15:48:00 | INFO     | app.api.v1.endpoints.podcasts  | {"job_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "status": "completed", "progress": 100, "event": "status_checked", "logger": "app.api.v1.endpoints.podcasts", "level": "info", "timestamp": "2025-10-16T14:48:00.462093Z"}
+15:48:00 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:48:00 | INFO     | api.request                    | {"method": "GET", "path": "/api/v1/podcasts/status/8cbf13bb-746c-42b2-9b91-87a96cd92487", "status_code": 200, "duration_ms": 1846.0, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:48:00.482688Z"}
+15:48:01 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:48:01 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+15:48:01 | INFO     | sqlalchemy.engine.Engine       | [cached since 176.8s ago] ('b4afc2ed-cc0d-49e9-8084-1d14317cf546',)
+15:48:01 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.script_content, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.id = $1::UUID AND podcasts.user_id = $2::UUID
+15:48:01 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00061s] (UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'))
+15:48:01 | INFO     | app.api.v1.endpoints.podcasts  | {"podcast_id": "UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487')", "has_title": true, "has_script": true, "script_length": 1367, "has_audio": false, "status": "completed", "event": "podcast_retrieved", "logger": "app.api.v1.endpoints.podcasts", "level": "info", "timestamp": "2025-10-16T14:48:01.938931Z"}
+15:48:01 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:48:01 | INFO     | api.request                    | {"method": "GET", "path": "/api/v1/podcasts/8cbf13bb-746c-42b2-9b91-87a96cd92487", "status_code": 200, "duration_ms": 1310.6, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:48:01.959724Z"}
+15:48:31 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:48:31 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+15:48:31 | INFO     | sqlalchemy.engine.Engine       | [cached since 206.9s ago] ('b4afc2ed-cc0d-49e9-8084-1d14317cf546',)
+15:48:32 | INFO     | app.services.podcast_service   | {"user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "skip": 0, "limit": 20, "status_filter": null, "event": "listing_podcasts", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:48:32.038677Z"}
+15:48:32 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.script_content, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.user_id = $1::UUID ORDER BY podcasts.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+15:48:32 | INFO     | sqlalchemy.engine.Engine       | [cached since 205.7s ago] (UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'), 20, 0)
+15:48:33 | INFO     | app.services.podcast_service   | {"count": 4, "event": "podcasts_listed", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:48:33.083570Z"}
+15:48:33 | INFO     | sqlalchemy.engine.Engine       | SELECT count(*) AS count_1 
+FROM podcasts 
+WHERE podcasts.user_id = $1::UUID
+15:48:33 | INFO     | sqlalchemy.engine.Engine       | [cached since 205.7s ago] (UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'),)
+15:48:34 | INFO     | sqlalchemy.engine.Engine       | UPDATE podcasts SET script_content=$1::VARCHAR, updated_at=$2::TIMESTAMP WITHOUT TIME ZONE WHERE podcasts.id = $3::UUID
+15:48:34 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00064s] (None, datetime.datetime(2025, 10, 16, 14, 48, 34, 136984), UUID('8cbf13bb-746c-42b2-9b91-87a96cd92487'))
+15:48:34 | INFO     | api.request                    | {"method": "GET", "path": "/api/v1/podcasts/", "status_code": 200, "duration_ms": 32016.82, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:48:34.138982Z"}
+15:48:34 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:54:26 | INFO     | app.main                       | {"event": "Shutting down application", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:54:26.313530Z"}
+15:54:27 | INFO     | app.main                       | {"event": "Database connections closed", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:54:27.310662Z"}
+15:54:27 | INFO     | app.core.cache                 | {"event": "Redis connections closed", "logger": "app.core.cache", "level": "info", "timestamp": "2025-10-16T14:54:27.329626Z"}
+15:54:27 | INFO     | app.main                       | {"event": "Redis connections closed", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:54:27.331628Z"}

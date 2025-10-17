@@ -1,0 +1,115 @@
+15:27:32 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:27:32.472831Z"}
+15:27:32 | INFO     | app.core.file_logging          | {"event": "  APPLICATION STARTUP", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:27:32.475052Z"}
+15:27:32 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:27:32.477066Z"}
+15:27:32 | INFO     | app.main                       | {"version": "1.0.0", "event": "Starting application", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:32.617355Z"}
+15:27:35 | INFO     | sqlalchemy.engine.Engine       | select pg_catalog.version()
+15:27:35 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+15:27:36 | INFO     | sqlalchemy.engine.Engine       | select current_schema()
+15:27:36 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+15:27:36 | INFO     | sqlalchemy.engine.Engine       | show standard_conforming_strings
+15:27:36 | INFO     | sqlalchemy.engine.Engine       | [raw sql] ()
+15:27:37 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:27:37 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:37 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00082s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:37 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:37 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.4951s ago] ('user_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.6606s ago] ('user_behavior', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.8246s ago] ('content_metadata', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 0.9888s ago] ('user_topic_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.155s ago] ('user_depth_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.324s ago] ('user_surprise_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:38 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.494s ago] ('user_contextual_preferences', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.664s ago] ('user_learning_states', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | [cached since 1.857s ago] ('user_behavioral_signals', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | [cached since 2.031s ago] ('user_cold_start_data', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | [cached since 2.2s ago] ('podcasts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+15:27:39 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00065s] ('podcaststatus', 'pg_catalog')
+15:27:40 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:27:40 | INFO     | app.main                       | {"event": "Database initialized", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:40.424664Z"}
+15:27:45 | WARNING  | app.core.cache                 | {"event": "Redis not available, using in-memory cache fallback: Error connecting to localhost:6379. Multiple exceptions: [Errno 10061] Connect call failed ('::1', 6379, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 6379).", "logger": "app.core.cache", "level": "warning", "timestamp": "2025-10-16T14:27:45.044294Z"}
+15:27:45 | INFO     | app.main                       | {"event": "Redis connected", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:45.044294Z"}
+15:39:12 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:39:13 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+15:39:13 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00235s] ('test@example.com',)
+15:39:14 | INFO     | sqlalchemy.engine.Engine       | UPDATE users SET updated_at=$1::TIMESTAMP WITHOUT TIME ZONE, last_login=$2::TIMESTAMP WITHOUT TIME ZONE WHERE users.id = $3::UUID
+15:39:14 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00085s] (datetime.datetime(2025, 10, 16, 14, 39, 14, 540856), datetime.datetime(2025, 10, 16, 14, 39, 14, 528836), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'))
+15:39:14 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:39:15 | INFO     | app.api.v1.endpoints.auth      | {"user_id": "b4afc2ed-cc0d-49e9-8084-1d14317cf546", "email": "test@example.com", "event": "User logged in", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-16T14:39:15.156808Z"}
+15:39:15 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 200, "duration_ms": 3599.82, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:39:15.170693Z"}
+15:39:56 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:39:56 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.email = $1::VARCHAR
+15:39:56 | INFO     | sqlalchemy.engine.Engine       | [cached since 43.5s ago] ('test@example.com',)
+15:39:57 | INFO     | sqlalchemy.engine.Engine       | UPDATE users SET updated_at=$1::TIMESTAMP WITHOUT TIME ZONE, last_login=$2::TIMESTAMP WITHOUT TIME ZONE WHERE users.id = $3::UUID
+15:39:57 | INFO     | sqlalchemy.engine.Engine       | [cached since 42.75s ago] (datetime.datetime(2025, 10, 16, 14, 39, 57, 287761), datetime.datetime(2025, 10, 16, 14, 39, 57, 285757), UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'))
+15:39:57 | INFO     | sqlalchemy.engine.Engine       | COMMIT
+15:39:57 | INFO     | app.api.v1.endpoints.auth      | {"user_id": "b4afc2ed-cc0d-49e9-8084-1d14317cf546", "email": "test@example.com", "event": "User logged in", "logger": "app.api.v1.endpoints.auth", "level": "info", "timestamp": "2025-10-16T14:39:57.622561Z"}
+15:39:57 | INFO     | api.request                    | {"method": "POST", "path": "/api/v1/auth/login", "status_code": 200, "duration_ms": 1636.94, "event": "Request completed", "logger": "api.request", "level": "info", "timestamp": "2025-10-16T14:39:57.624561Z"}
+15:39:59 | INFO     | sqlalchemy.engine.Engine       | BEGIN (implicit)
+15:39:59 | INFO     | sqlalchemy.engine.Engine       | SELECT users.id, users.email, users.password_hash, users.tier, users.is_active, users.is_verified, users.created_at, users.updated_at, users.last_login 
+FROM users 
+WHERE users.id = $1::UUID
+15:39:59 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00046s] ('b4afc2ed-cc0d-49e9-8084-1d14317cf546',)
+15:40:02 | INFO     | app.services.content.llm_service | {"model": "sonar", "event": "LLM initialized with Perplexity", "logger": "app.services.content.llm_service", "level": "info", "timestamp": "2025-10-16T14:40:02.750314Z"}
+15:40:03 | INFO     | app.services.podcast_service   | {"user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "skip": 0, "limit": 20, "status_filter": null, "event": "listing_podcasts", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:40:03.063517Z"}
+15:40:03 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.id, podcasts.user_id, podcasts.location, podcasts.podcast_type, podcasts.status, podcasts.progress_percentage, podcasts.title, podcasts.description, podcasts.audio_url, podcasts.duration_seconds, podcasts.file_size_bytes, podcasts.podcast_metadata, podcasts.error_message, podcasts.created_at, podcasts.updated_at, podcasts.completed_at 
+FROM podcasts 
+WHERE podcasts.user_id = $1::UUID ORDER BY podcasts.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+15:40:03 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00072s] (UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'), 20, 0)
+15:40:04 | INFO     | app.services.podcast_service   | {"count": 3, "event": "podcasts_listed", "logger": "app.services.podcast_service", "level": "info", "timestamp": "2025-10-16T14:40:04.158759Z"}
+15:40:04 | INFO     | sqlalchemy.engine.Engine       | SELECT count(*) AS count_1 
+FROM podcasts 
+WHERE podcasts.user_id = $1::UUID
+15:40:04 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00057s] (UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546'),)
+15:40:04 | INFO     | sqlalchemy.engine.Engine       | SELECT podcasts.script_content AS podcasts_script_content 
+FROM podcasts 
+WHERE podcasts.id = $1::UUID
+15:40:04 | INFO     | sqlalchemy.engine.Engine       | [generated in 0.00059s] (UUID('3c13f769-eeb5-4aee-afe0-328b1ccb68aa'),)
+15:40:04 | ERROR    | app.api.v1.endpoints.podcasts  | {"user_id": "UUID('b4afc2ed-cc0d-49e9-8084-1d14317cf546')", "error": "1 validation error for PodcastResponse\nscript_content\n  Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s) [type=get_attribute_error, input_value=<Podcast(id=3c13f769-eeb5...dcastStatus.COMPLETED')>, input_type=Podcast]\n    For further information visit https://errors.pydantic.dev/2.5/v/get_attribute_error", "error_type": "ValidationError", "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\burik\\podcastCreator2\\backend\\app\\api\\v1\\endpoints\\podcasts.py\", line 214, in list_podcasts\n    podcasts=[PodcastResponse.model_validate(p) for p in podcasts],\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\burik\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 503, in model_validate\n    return cls.__pydantic_validator__.validate_python(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 1 validation error for PodcastResponse\nscript_content\n  Error extracting attribute: MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s) [type=get_attribute_error, input_value=<Podcast(id=3c13f769-eeb5...dcastStatus.COMPLETED')>, input_type=Podcast]\n    For further information visit https://errors.pydantic.dev/2.5/v/get_attribute_error\n", "event": "list_podcasts_failed", "logger": "app.api.v1.endpoints.podcasts", "level": "error", "timestamp": "2025-10-16T14:40:04.728245Z"}
+15:40:04 | INFO     | sqlalchemy.engine.Engine       | ROLLBACK
+15:40:04 | ERROR    | api.request                    | {"method": "GET", "path": "/api/v1/podcasts/", "status_code": 500, "duration_ms": 5521.47, "event": "Request failed", "logger": "api.request", "level": "error", "timestamp": "2025-10-16T14:40:04.907964Z"}
+15:44:02 | INFO     | app.main                       | {"event": "Shutting down application", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:44:02.283239Z"}
+15:44:02 | INFO     | app.main                       | {"event": "Database connections closed", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:44:02.707145Z"}
+15:44:02 | INFO     | app.core.cache                 | {"event": "Redis connections closed", "logger": "app.core.cache", "level": "info", "timestamp": "2025-10-16T14:44:02.728336Z"}
+15:44:02 | INFO     | app.main                       | {"event": "Redis connections closed", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:44:02.730335Z"}

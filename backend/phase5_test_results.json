@@ -1,0 +1,114 @@
+{
+  "test_run_time": "2025-10-15T03:16:33.031978",
+  "tests": [
+    {
+      "name": "Generate Base Podcast",
+      "passed": true,
+      "details": {
+        "success": true,
+        "has_script": true,
+        "has_narrative": true,
+        "has_quality_report": true,
+        "script_length": 893,
+        "num_sections": 27,
+        "duration_seconds": 680.0,
+        "quality_score": 0.78625,
+        "engagement_score": 0.885
+      }
+    },
+    {
+      "name": "Generate Standout Podcast",
+      "passed": true,
+      "details": {
+        "success": true,
+        "podcast_type": "standout_podcast",
+        "has_mystery_elements": true
+      }
+    },
+    {
+      "name": "Quality Control",
+      "passed": true,
+      "details": {
+        "has_quality_report": true,
+        "overall_score": 0.9425,
+        "factual_accuracy": 1.0,
+        "content_structure": 0.85,
+        "cultural_sensitivity": 1.0,
+        "originality": 0.85,
+        "source_attribution": 0.95,
+        "passed_quality": false
+      }
+    },
+    {
+      "name": "TTS Optimization",
+      "passed": true,
+      "details": {
+        "has_tts_markers": true,
+        "num_markers": 81,
+        "marker_types": [
+          "pause",
+          "emphasis"
+        ]
+      }
+    },
+    {
+      "name": "User Personalization (Different Lengths)",
+      "passed": true,
+      "details": {
+        "short_duration": 380.0,
+        "long_duration": 980.0,
+        "long_is_longer": true
+      }
+    },
+    {
+      "name": "Script Structure",
+      "passed": true,
+      "details": {
+        "has_hook": true,
+        "has_conclusion": true,
+        "has_substantial_content": true,
+        "content_length": 893,
+        "num_sections": 27,
+        "section_types": [
+          "hook",
+          "conclusion",
+          "main_content",
+          "transition",
+          "climax"
+        ]
+      }
+    },
+    {
+      "name": "Batch Generation",
+      "passed": true,
+      "details": {
+        "total_items": 3,
+        "successes": 3,
+        "failures": 0
+      }
+    },
+    {
+      "name": "TTS Optimizer Pronunciation Dictionary",
+      "passed": true,
+      "details": {
+        "has_pronunciation_dict": true,
+        "dict_size": 15,
+        "has_reykjavik": true,
+        "has_geysir": true,
+        "sample_pronunciations": [
+          "reykjavik",
+          "geysir",
+          "\u00feingvellir",
+          "eyjafjallaj\u00f6kull",
+          "marrakech"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "errors": []
+  }
+}

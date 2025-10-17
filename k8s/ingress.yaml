@@ -1,0 +1,59 @@
+# Ingress Configuration with SSL/TLS
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: location-podcast-ingress
+  namespace: location-podcast
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/rate-limit: "100"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+spec:
+  tls:
+  - hosts:
+    - locationpodcast.com
+    - www.locationpodcast.com
+    - api.locationpodcast.com
+    secretName: locationpodcast-tls
+  rules:
+  # Frontend
+  - host: locationpodcast.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
+  
+  # WWW redirect
+  - host: www.locationpodcast.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
+  
+  # API Backend
+  - host: api.locationpodcast.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: backend
+            port:
+              number: 8000

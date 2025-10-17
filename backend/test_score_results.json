@@ -1,0 +1,682 @@
+[
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "The Westman Islands Puffin Colony Living in Human Houses",
+    "score": 10.0,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 4.3125,
+      "uniqueness": 8.049999999999999,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.3,
+      "historical": 0.0,
+      "geographic": 3.4499999999999997,
+      "linguistic": 5.175,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "Geysir: The Original Geyser That All Others Are Named After",
+    "score": 10.0,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 4.3125,
+      "uniqueness": 4.6,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 4.6,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 5.175,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "Svalbard Seed Vault Arctic Access Portal Located in Iceland",
+    "score": 2.3275,
+    "detected_tier": "good",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "The Last Legal Duel in Europe Fought with Codfish in 1802",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "Raven Parliament That Votes on Municipal Laws",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "The Gnawa Musicians Who Can Predict Death Through Song",
+    "score": 5.344185,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 4.125,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.2,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 6.105000000000001,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "Marrakech's Underground Aqueduct City Built by Djinn",
+    "score": 4.962168750000001,
+    "detected_tier": "very_good",
+    "methods": {
+      "impossibility": 4.125,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.2,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.95,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "The Majorelle Garden Plants That Change Color Based on Prayer Times",
+    "score": 8.038126250000001,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 4.3125,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 6.8999999999999995,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 1.8399999999999999,
+      "linguistic": 5.175,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "Marrakech Weather Controlled by Collective Drumming Rituals",
+    "score": 1.5592499999999998,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.949999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "EXCEPTIONAL (Tier 1)",
+    "title": "The Koutoubia Mosque Minaret That Broadcasts Dreams",
+    "score": 2.6075,
+    "detected_tier": "good",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 1.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Reykjavik's Underground Hot Spring Swimming Pool Network",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Nordic Noir Crime Scene Tourism Industry",
+    "score": 8.632618749999999,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 4.6,
+      "temporal": 0.0,
+      "cultural": 3.4499999999999997,
+      "atlas_obscura": 2.3,
+      "historical": 0.0,
+      "geographic": 3.4499999999999997,
+      "linguistic": 5.175,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "The Icelandic Phone Book Folk Music Tradition",
+    "score": 4.67110875,
+    "detected_tier": "very_good",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 3.3000000000000003,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.2,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 5.444999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Volcanic Ash Weather Prediction by Sheep Behavior",
+    "score": 1.8655,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 1.6,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Aurora Borealis Sign Language for Silent Tourism",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Marrakech Spice Market Vendors Who Diagnose Illness by Smell",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "The Saadian Tombs' Mathematical Puzzle Floor That Changes Patterns",
+    "score": 3.4765500000000005,
+    "detected_tier": "good",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 3.8500000000000005,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.95,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Marrakech Leather Tanneries Using 1000-Year-Old Bacterial Cultures",
+    "score": 10.0,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 4.3125,
+      "uniqueness": 4.6,
+      "temporal": 0.0,
+      "cultural": 10.0,
+      "atlas_obscura": 4.6,
+      "historical": 0.0,
+      "geographic": 3.4499999999999997,
+      "linguistic": 5.175,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Atlas Mountain Berber Villages Visible Only at Sunset",
+    "score": 1.5592499999999998,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.949999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "VERY GOOD (Tier 2)",
+    "title": "Marrakech Snake Charmers Who Communicate with Cobras Through Poetry",
+    "score": 2.4692499999999997,
+    "detected_tier": "good",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.949999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Reykjavik's 24-Hour Literary Culture During Polar Night",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Geothermal Bread Baking in Natural Hot Springs",
+    "score": 9.792824999999999,
+    "detected_tier": "exceptional",
+    "methods": {
+      "impossibility": 4.3125,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 5.175,
+      "atlas_obscura": 4.6,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 5.175,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Viking Chess Championships Using Original Rules",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Municipal Elf Interaction Committee Official Protocols",
+    "score": 2.6582500000000002,
+    "detected_tier": "good",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 2.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 5.550000000000001,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Reykjavik Harbor Seal Population That Understands Icelandic",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Marrakech's Traditional Henna Artists Who Paint Family Genealogies",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Ben Youssef Madrasa's Mathematical Teaching Through Tile Patterns",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Marrakech Market Traders Using Ancient Babylonian Counting Systems",
+    "score": 1.5592499999999998,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.949999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Marrakech's Traditional Water Clock That Predicts Seasonal Changes",
+    "score": 1.5592499999999998,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.949999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "GOOD (Tier 3)",
+    "title": "Marrakech Storytellers Who Narrate Dreams of Sleeping Audience Members",
+    "score": 1.5592499999999998,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.949999999999999,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Reykjavik's Popular Downtown Shopping District",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Blue Lagoon Geothermal Spa Experience",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Hallgrimskirkja Church Architecture and City Views",
+    "score": 1.8655,
+    "detected_tier": "average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 1.6,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Reykjavik Nightlife and Bar Culture",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Reykjavik University Campus and Student Life",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Marrakech's Popular Djemaa el-Fna Market Square",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Traditional Moroccan Hammam Bath Houses",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Marrakech Textile and Carpet Shopping in the Souks",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Marrakech Hotel and Restaurant Tourism Industry",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  },
+  {
+    "tier": "MUNDANE (Tier 4)",
+    "title": "Marrakech Gardens and Parks for Recreation",
+    "score": 1.4175,
+    "detected_tier": "below_average",
+    "methods": {
+      "impossibility": 0.0,
+      "uniqueness": 0.0,
+      "temporal": 0.0,
+      "cultural": 0.0,
+      "atlas_obscura": 0.0,
+      "historical": 0.0,
+      "geographic": 0.0,
+      "linguistic": 4.5,
+      "cross_cultural": 0.0
+    }
+  }
+]

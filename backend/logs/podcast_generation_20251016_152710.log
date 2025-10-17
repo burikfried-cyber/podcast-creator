@@ -1,0 +1,8 @@
+15:27:11 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:27:11.005780Z"}
+15:27:11 | INFO     | app.core.file_logging          | {"event": "  APPLICATION STARTUP", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:27:11.010103Z"}
+15:27:11 | INFO     | app.core.file_logging          | {"event": "================================================================================", "logger": "app.core.file_logging", "level": "info", "timestamp": "2025-10-16T14:27:11.011109Z"}
+15:27:11 | INFO     | app.main                       | {"version": "1.0.0", "event": "Starting application", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:11.072026Z"}
+15:27:11 | INFO     | app.main                       | {"event": "Shutting down application", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:11.139954Z"}
+15:27:11 | INFO     | app.main                       | {"event": "Database connections closed", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:11.141956Z"}
+15:27:11 | INFO     | app.core.cache                 | {"event": "Redis connections closed", "logger": "app.core.cache", "level": "info", "timestamp": "2025-10-16T14:27:11.143098Z"}
+15:27:11 | INFO     | app.main                       | {"event": "Redis connections closed", "logger": "app.main", "level": "info", "timestamp": "2025-10-16T14:27:11.143098Z"}

@@ -1,0 +1,165 @@
+{
+  "test_run_time": "2025-10-15T03:57:47.226553",
+  "tests": [
+    {
+      "name": "TTS Synthesis - Free Tier",
+      "passed": true,
+      "details": {
+        "provider": "eSpeak",
+        "cost": 0.0,
+        "duration": 15.84,
+        "file_size": 116
+      }
+    },
+    {
+      "name": "TTS Synthesis - Premium Tier",
+      "passed": true,
+      "details": {
+        "provider": "AWS Polly",
+        "cost": 0.000792,
+        "duration": 15.84
+      }
+    },
+    {
+      "name": "Provider Selection",
+      "passed": true,
+      "details": {
+        "provider": "AWS Polly",
+        "quality_score": 8,
+        "cost_per_char": 4e-06
+      }
+    },
+    {
+      "name": "Audio Processing",
+      "passed": true,
+      "details": {
+        "format": "mp3",
+        "bitrate": "128kbps",
+        "file_size": 46,
+        "processing_time": 0.0,
+        "optimizations": [
+          "normalization",
+          "noise_reduction",
+          "clarity_boost",
+          "dynamic_range_optimization",
+          "compression_128kbps",
+          "format_optimization"
+        ],
+        "quality_score": 0.791875
+      }
+    },
+    {
+      "name": "Multiple Quality Tiers",
+      "passed": true,
+      "details": {
+        "basic": {
+          "bitrate": "96kbps",
+          "file_size": 34,
+          "quality_score": 0.734375
+        },
+        "standard": {
+          "bitrate": "128kbps",
+          "file_size": 46,
+          "quality_score": 0.791875
+        },
+        "premium": {
+          "bitrate": "192kbps",
+          "file_size": 69,
+          "quality_score": 0.8378125
+        },
+        "ultra_premium": {
+          "bitrate": "320kbps",
+          "file_size": 116,
+          "quality_score": 0.95
+        }
+      }
+    },
+    {
+      "name": "Audio Delivery",
+      "passed": true,
+      "details": {
+        "has_download_url": true,
+        "has_cdn_url": true,
+        "has_streaming": true,
+        "is_expired": false,
+        "quality_variants": 3
+      }
+    },
+    {
+      "name": "Streaming Setup",
+      "passed": true,
+      "details": {
+        "streaming_url": "https://cdn.example.com/audio/test_streaming/stream.m3u8",
+        "num_variants": 3,
+        "variants": [
+          {
+            "quality": "high",
+            "bitrate": "192kbps",
+            "url": "https://cdn.example.com/audio/test_streaming/high/stream.m3u8"
+          },
+          {
+            "quality": "medium",
+            "bitrate": "128kbps",
+            "url": "https://cdn.example.com/audio/test_streaming/medium/stream.m3u8"
+          },
+          {
+            "quality": "low",
+            "bitrate": "96kbps",
+            "url": "https://cdn.example.com/audio/test_streaming/low/stream.m3u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Quality Assessment",
+      "passed": true,
+      "details": {
+        "overall_score": 8.79225,
+        "passed_qa": true,
+        "num_issues": 0,
+        "num_warnings": 0,
+        "snr": 53.26875,
+        "clarity": 0.8378125,
+        "naturalness": 0.86025
+      }
+    },
+    {
+      "name": "Complete End-to-End Pipeline",
+      "passed": true,
+      "details": {
+        "total_time_seconds": 0.03374767303466797,
+        "synthesis_cost": 0.000792,
+        "processing_time": 0.020976781845092773,
+        "quality_score": 8.79225,
+        "delivery_url": true
+      }
+    },
+    {
+      "name": "Cost Tracking",
+      "passed": true,
+      "details": {
+        "total_syntheses": 5,
+        "total_cost": 0.003312,
+        "average_cost": 0.0006624,
+        "by_provider": {
+          "eSpeak": {
+            "count": 1,
+            "total_cost": 0.0,
+            "average_cost": 0.0
+          },
+          "AWS Polly": {
+            "count": 4,
+            "total_cost": 0.003312,
+            "average_cost": 0.000828
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "errors": []
+  }
+}

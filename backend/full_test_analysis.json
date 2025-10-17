@@ -1,0 +1,72 @@
+{
+  "tier_stats": {
+    "EXCEPTIONAL (Tier 1)": {
+      "avg": 4.767373,
+      "min": 1.4175,
+      "max": 10.0,
+      "count": 10,
+      "target": 5.0,
+      "above_target": 4,
+      "accuracy": 40.0
+    },
+    "VERY GOOD (Tier 2)": {
+      "avg": 3.69267775,
+      "min": 1.4175,
+      "max": 10.0,
+      "count": 10,
+      "target": 3.8,
+      "above_target": 3,
+      "accuracy": 30.0
+    },
+    "GOOD (Tier 3)": {
+      "avg": 2.4216325,
+      "min": 1.4175,
+      "max": 9.792824999999999,
+      "count": 10,
+      "target": 2.3,
+      "above_target": 2,
+      "accuracy": 20.0
+    },
+    "MUNDANE (Tier 4)": {
+      "avg": 1.4623,
+      "min": 1.4175,
+      "max": 1.8655,
+      "count": 10,
+      "target": 1.5,
+      "above_target": 1,
+      "accuracy": 90.0
+    }
+  },
+  "method_effectiveness": {
+    "impossibility": {
+      "avg": 4.258928571428571,
+      "count": 7
+    },
+    "uniqueness": {
+      "avg": 5.029999999999999,
+      "count": 5
+    },
+    "atlas_obscura": {
+      "avg": 2.8346153846153848,
+      "count": 13
+    },
+    "geographic": {
+      "avg": 2.5649999999999995,
+      "count": 6
+    },
+    "linguistic": {
+      "avg": 4.781249999999998,
+      "count": 40
+    },
+    "cultural": {
+      "avg": 6.3812500000000005,
+      "count": 4
+    },
+    "cross_cultural": {
+      "avg": 1.0,
+      "count": 1
+    }
+  },
+  "overall_accuracy": 45.0,
+  "total_items": 40
+}
