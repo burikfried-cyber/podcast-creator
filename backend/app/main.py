@@ -6,6 +6,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
+import os
 import time
 from app.core.config import settings
 from app.core.logging import configure_logging, log_request
@@ -36,12 +38,19 @@ async def lifespan(app: FastAPI):
     
     try:
         # Initialize database
-        await init_db()
-        logger.info("Database initialized")
+        try:
+            await init_db()
+            logger.info("Database initialized")
+        except Exception as e:
+            logger.error("Database initialization failed", error=str(e))
+            logger.warning("App will start without database connection")
         
         # Connect to Redis
-        await cache.connect()
-        logger.info("Redis connected")
+        try:
+            await cache.connect()
+            logger.info("Redis connected")
+        except Exception as e:
+            logger.warning("Redis connection failed", error=str(e))
         
         yield
         
@@ -146,6 +155,17 @@ app.include_router(api_router, prefix=settings.API_V1_PREFIX)
 
 # Metrics endpoint
 app.add_route("/metrics", metrics_endpoint, methods=["GET"])
+
+# Configure static file serving for audio files
+AUDIO_DIR = os.getenv("AUDIO_STORAGE_PATH", "/tmp/podcast_audio")
+os.makedirs(AUDIO_DIR, exist_ok=True)
+logger.info("audio_directory_configured", path=AUDIO_DIR)
+
+try:
+    app.mount("/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
+    logger.info("audio_static_files_mounted", path="/audio")
+except Exception as e:
+    logger.warning("audio_static_files_mount_failed", error=str(e))
 
 
 # Root endpoint

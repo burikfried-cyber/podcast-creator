@@ -14,6 +14,12 @@ from app.models.user import User
 from app.services.narrative.podcast_generator import PodcastGenerator
 from app.services.narrative.models import PodcastType, UserProfile
 from app.services.content import WikipediaService, LocationService
+from app.services.content.content_aggregator import content_aggregator
+from app.services.content.hierarchical_collector import hierarchical_collector
+from app.services.content.question_detector import question_detector
+from app.services.research.deep_research_service import deep_research_service
+from app.services.narrative.enhanced_podcast_generator import enhanced_podcast_generator
+from app.services.audio.audio_service import audio_service
 from app.core.file_logging import log_section, log_step
 
 logger = structlog.get_logger()
@@ -80,51 +86,77 @@ class PodcastService:
             log_step(1, f"Starting generation for {podcast.location}", "STARTED")
             logger.info("podcast_generation_started", podcast_id=podcast_id, location=podcast.location)
             
-            # Step 1: Gather content (30%)
-            log_step(1, "Gathering content from Wikipedia and Location services", "RUNNING")
-            content_data = await self._gather_content(podcast.location)
+            # Step 1: Gather content from all sources with hierarchical collection (30%)
+            log_step(1, "Gathering multi-level content from Wikipedia, Wikidata, GeoNames, and Location services", "RUNNING")
+            user_preferences = podcast.podcast_metadata or {}
+            content_data = await self._gather_content(podcast.location, user_preferences)
             podcast.progress_percentage = 30
             await self.db.commit()
-            log_step(1, "Content gathering complete", "DONE")
             
-            # Step 2: Generate script (60%)
-            log_step(2, "Generating podcast script with Perplexity AI", "RUNNING")
+            # Log hierarchical collection results
+            hierarchical_meta = content_data.get('hierarchical_metadata', {})
+            levels_collected = hierarchical_meta.get('levels_collected', 1)
+            context = hierarchical_meta.get('context_preference', 'balanced')
+            log_step(1, f"Content gathering complete - {levels_collected} geographic levels collected ({context})", "DONE")
+            
+            # Step 2: Generate script with enhanced generator (60%)
+            log_step(2, "Generating podcast script with Enhanced Perplexity AI (CLEAR framework)", "RUNNING")
             user_profile = self._create_user_profile(podcast.user_id, podcast.podcast_metadata or {})
             podcast_type_enum = self._get_podcast_type_enum(podcast.podcast_type)
             
-            result = await self.generator.generate_podcast(
+            # Get target duration from metadata or default to 10 minutes
+            target_duration = (podcast.podcast_metadata or {}).get('duration_minutes', 10)
+            
+            # Use enhanced generator with CLEAR framework
+            result = await enhanced_podcast_generator.generate_information_rich_script(
                 content_data=content_data,
-                podcast_type=podcast_type_enum,
-                user_preferences=user_profile,
-                quality_check=True
+                podcast_type=podcast_type_enum.value,
+                target_duration=target_duration,
+                user_preferences=podcast.podcast_metadata
             )
             
             if not result.get('success'):
-                error_msg = result.get('error', 'Unknown generation error')
+                error_msg = result.get('generation_metadata', {}).get('error', 'Script generation failed validation')
                 log_step(2, f"Script generation FAILED: {error_msg}", "ERROR")
+                # Log quality metrics for debugging
+                quality_metrics = result.get('quality_metrics', {})
+                logger.warning("script_generation_failed", metrics=quality_metrics)
                 raise Exception(error_msg)
             
             podcast.progress_percentage = 60
             await self.db.commit()
-            log_step(2, "Script generation complete", "DONE")
+            
+            # Log generation metadata
+            gen_metadata = result.get('generation_metadata', {})
+            quality_metrics = result.get('quality_metrics', {})
+            log_step(2, f"Script generation complete - {gen_metadata.get('attempts', 1)} attempts, {gen_metadata.get('generation_time', 0):.1f}s", "DONE")
             
             # Step 3: Extract script details (70%)
             log_step(3, "Extracting script details and metadata", "RUNNING")
             logger.info("extracting_script_details", podcast_id=podcast_id)
             
-            script = result.get('script')
-            if not script:
+            script_text = result.get('script')
+            if not script_text:
                 log_step(3, "No script in result", "ERROR")
                 raise Exception("No script in generation result")
             
-            podcast.title = getattr(script, 'title', f"Podcast about {podcast.location}")
-            podcast.description = getattr(script, 'description', '')
-            podcast.script_content = getattr(script, 'content', '')
-            podcast.duration_seconds = getattr(script, 'estimated_duration_seconds', 600)
+            # Build title and description
+            is_question = content_data.get('is_question', False)
+            if is_question:
+                podcast.title = f"Research: {content_data.get('location', 'Unknown')[:100]}"
+                podcast.description = content_data.get('description', '')[:500]
+            else:
+                podcast.title = content_data.get('title', f"Podcast about {podcast.location}")
+                podcast.description = content_data.get('description', '')[:500]
             
-            # Extract quality score from quality report
-            quality_report = result.get('quality_report')
-            quality_score = getattr(quality_report, 'overall_score', None) if quality_report else None
+            podcast.script_content = script_text
+            
+            # Calculate duration from word count (150 words/minute)
+            word_count = gen_metadata.get('actual_word_count', len(script_text.split()))
+            podcast.duration_seconds = int((word_count / 150) * 60)
+            
+            # Use validation score as quality score
+            quality_score = 1.0 if quality_metrics.get('passes_validation') else 0.7
             
             podcast.podcast_metadata = {
                 **(podcast.podcast_metadata or {}),
@@ -137,15 +169,63 @@ class PodcastService:
             log_step(3, f"Script extracted: {podcast.title}", "DONE")
             logger.info("script_details_extracted", podcast_id=podcast_id, title=podcast.title)
             
-            # Step 4: Generate audio (90%)
-            log_step(4, "Preparing audio generation (skipped for now)", "RUNNING")
-            # TODO: Integrate audio generation service
-            # For now, we'll skip audio generation
-            # audio_url = await self._generate_audio(script.content)
-            # podcast.audio_url = audio_url
+            # Step 4: Generate audio with Google Cloud TTS (90%)
+            log_step(4, "Generating audio with Google Cloud TTS", "RUNNING")
+            
+            # Determine user tier (free vs premium)
+            user_tier = (podcast.podcast_metadata or {}).get('user_tier', 'free')
+            
+            try:
+                # Generate audio using Google TTS
+                audio_result = await audio_service.generate_podcast_audio(
+                    script_text=script_text,
+                    podcast_id=str(podcast.id),
+                    user_tier=user_tier,
+                    speaking_rate=1.0,
+                    pitch=0.0
+                )
+                
+                if audio_result.get('success'):
+                    # Update podcast with audio details
+                    podcast.audio_url = audio_result['audio_url']
+                    podcast.duration_seconds = audio_result['duration_seconds']
+                    
+                    # Add audio metadata
+                    podcast.podcast_metadata = {
+                        **(podcast.podcast_metadata or {}),
+                        'audio_generation': {
+                            'file_size_mb': audio_result.get('file_size_mb', 0),
+                            'generation_time': audio_result.get('generation_time', 0),
+                            'synthesis_time': audio_result.get('synthesis_time', 0),
+                            'cost_estimate': audio_result.get('cost_estimate', 0),
+                            'voice_name': audio_result.get('voice_name', ''),
+                            'voice_type': audio_result.get('voice_type', '')
+                        }
+                    }
+                    
+                    log_step(4, f"Audio generated: {audio_result.get('file_size_mb', 0):.2f}MB, {audio_result.get('duration_seconds', 0)}s", "DONE")
+                    logger.info("audio_generation_success",
+                               podcast_id=podcast_id,
+                               duration=audio_result['duration_seconds'],
+                               cost=audio_result.get('cost_estimate', 0))
+                else:
+                    # Audio generation failed, but continue without audio
+                    error_msg = audio_result.get('error', 'Unknown error')
+                    log_step(4, f"Audio generation failed: {error_msg} (continuing without audio)", "WARNING")
+                    logger.warning("audio_generation_failed_continuing",
+                                 podcast_id=podcast_id,
+                                 error=error_msg)
+                    
+            except Exception as e:
+                # Handle audio generation errors gracefully
+                log_step(4, f"Audio generation error: {str(e)} (continuing without audio)", "WARNING")
+                logger.warning("audio_generation_error",
+                             podcast_id=podcast_id,
+                             error=str(e))
+            
             podcast.progress_percentage = 90
             await self.db.commit()
-            log_step(4, "Audio preparation complete", "DONE")
+            log_step(4, "Audio step complete", "DONE")
             
             # Step 5: Complete (100%)
             log_step(5, "Finalizing podcast", "RUNNING")
@@ -178,34 +258,153 @@ class PodcastService:
             
             log_section(f"FAILED: {str(e)}")
     
-    async def _gather_content(self, location: str) -> Dict[str, Any]:
+    async def _gather_content(self, location: str, user_preferences: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
-        Gather real content about the location from Wikipedia and location services
+        Gather content using question detection and routing.
+        Routes to deep research for questions, hierarchical collection for locations.
         """
-        logger.info("gathering_content", location=location)
+        logger.info("gathering_content_with_routing", input=location[:100])
         
-        # Fetch real content from Wikipedia
-        wiki_content = await self.wikipedia.get_location_content(location)
-        interesting_facts = await self.wikipedia.get_interesting_facts(wiki_content)
+        # Phase 1C: Detect if input is a question
+        detection = question_detector.is_question(location)
         
-        # Fetch location details
-        location_details = await self.location_service.get_location_details(location)
+        if detection["is_question"]:
+            # Question path: Use deep research
+            logger.info("question_detected", 
+                       question_type=detection.get("question_type"),
+                       confidence=detection.get("confidence"))
+            
+            return await self._gather_research_content(location, user_preferences, detection)
+        else:
+            # Location path: Use hierarchical collector
+            logger.info("location_detected", location=location)
+            return await self._gather_location_content(location, user_preferences)
+    
+    async def _gather_research_content(
+        self, 
+        question: str, 
+        user_preferences: Optional[Dict[str, Any]], 
+        detection: Dict
+    ) -> Dict[str, Any]:
+        """
+        Gather content for question-based research.
+        Uses deep research service + optional location context.
+        """
+        depth_level = user_preferences.get("depth_preference", 3) if user_preferences else 3
         
-        logger.info("content_gathered",
+        # Conduct deep research
+        research_result = await deep_research_service.research_question(
+            question,
+            depth_level=depth_level
+        )
+        
+        # Check if location was extracted from question
+        extracted_location = detection.get("extracted_location")
+        location_context = None
+        
+        if extracted_location:
+            logger.info("location_extracted_from_question", location=extracted_location)
+            try:
+                # Get location context to enrich research
+                location_context = await hierarchical_collector.collect_hierarchical_content(
+                    extracted_location,
+                    user_preferences
+                )
+            except Exception as e:
+                logger.warning("location_context_failed", error=str(e))
+        
+        # Build content data structure
+        return {
+            'id': question,
+            'location': question,
+            'title': f"Research: {question[:100]}",
+            'description': research_result.get("overview", ""),
+            'content': research_result.get("comprehensive_answer", ""),
+            'sources': [s.get("url", s.get("source", "Unknown")) for s in research_result.get("sources", [])],
+            # Phase 1C: Deep research data
+            'is_question': True,
+            'question_type': detection.get("question_type"),
+            'research_result': research_result,
+            'key_findings': research_result.get("key_findings", []),
+            'detailed_explanation': research_result.get("detailed_explanation", ""),
+            'conclusion': research_result.get("conclusion", ""),
+            'confidence': research_result.get("confidence", 0.0),
+            'research_time': research_result.get("research_time", 0.0),
+            # Optional location context
+            'extracted_location': extracted_location,
+            'location_context': location_context,
+            # Metadata
+            'collection_metadata': {
+                'method': 'deep_research',
+                'depth_level': depth_level,
+                'has_location_context': location_context is not None
+            }
+        }
+    
+    async def _gather_location_content(
+        self,
+        location: str,
+        user_preferences: Optional[Dict[str, Any]]
+    ) -> Dict[str, Any]:
+        """
+        Gather content for location-based podcasts.
+        Uses hierarchical collector for multi-level geographic context.
+        """
+        # Use hierarchical collector for multi-level content collection
+        hierarchical_content = await hierarchical_collector.collect_hierarchical_content(
+            location,
+            user_preferences
+        )
+        
+        # Extract primary content for backward compatibility
+        primary_content = hierarchical_content.get('primary_content', {})
+        aggregated = primary_content
+        
+        # Extract data from aggregated sources
+        wikipedia_data = aggregated.get('sources', {}).get('wikipedia', {})
+        wikidata_data = aggregated.get('sources', {}).get('wikidata', {})
+        geonames_data = aggregated.get('sources', {}).get('geonames', {})
+        location_data = aggregated.get('sources', {}).get('location', {})
+        
+        # Get interesting facts from Wikipedia (backward compatibility)
+        interesting_facts = []
+        if wikipedia_data:
+            interesting_facts = await self.wikipedia.get_interesting_facts(wikipedia_data)
+        
+        # Log collection results
+        metadata = aggregated.get('collection_metadata', {})
+        hierarchical_meta = hierarchical_content.get('collection_metadata', {})
+        
+        logger.info("hierarchical_content_gathered",
                    location=location,
-                   wiki_title=wiki_content.get('title'),
-                   facts_count=len(interesting_facts))
+                   levels_collected=hierarchical_meta.get('levels_collected'),
+                   context=hierarchical_content.get('context_preference'),
+                   sources_successful=metadata.get('sources_successful'))
         
+        # Return backward-compatible structure with enhancements
         return {
             'id': location,
             'location': location,
-            'title': wiki_content.get('title', location),
-            'description': wiki_content.get('summary', f"Information about {location}"),
-            'wiki_content': wiki_content,
+            'title': wikipedia_data.get('title', location),
+            'description': wikipedia_data.get('summary', f"Information about {location}"),
+            'wiki_content': wikipedia_data,
             'interesting_facts': interesting_facts,
-            'location_details': location_details,
+            'location_details': location_data,
             'content': f"This is a podcast about {location}. It covers the history, culture, and interesting facts about this location.",
-            'sources': ['mock_data']
+            'sources': ['wikipedia', 'wikidata', 'geonames', 'location'],
+            # Phase 1A: Multi-source aggregated content
+            'aggregated_content': aggregated,
+            'hierarchy': aggregated.get('hierarchy', {}),
+            'structured_facts': aggregated.get('structured_facts', []),
+            'geographic_context': aggregated.get('geographic_context', {}),
+            'quality_scores': aggregated.get('quality_scores', {}),
+            'collection_metadata': metadata,
+            # Phase 1B: Hierarchical multi-level content
+            'hierarchical_content': hierarchical_content,
+            'content_levels': hierarchical_content.get('content_levels', {}),
+            'content_weights': hierarchical_content.get('content_weights', {}),
+            'context_preference': hierarchical_content.get('context_preference', 'balanced'),
+            'hierarchical_metadata': hierarchical_meta
         }
     
     def _create_user_profile(self, user_id: UUID, metadata: Dict[str, Any]) -> UserProfile:

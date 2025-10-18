@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "podcast-creator-475512",
+  "private_key_id": "d34ef5fd49b07b3515a66243b93bab50bc384d63",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDdMdAOOIAuI99g\nQBNWBfmNIYHJ53fCCPwLiZXhiisSoFERVc8y+/jEDZeue6F8DmZcDmNXX8pnJbMk\niHVtYCBGRZ/0VwQwjdtcSwQJO9zGIfaWqp3kI5KTu+0Ol1IvgkZGmXkaoZr5fWsQ\n4ew19vOgo12KcuVglKtrL+v9D2vOFf4OTSYZfNFMh2d9vjLqyhqYoaMisCU9u4tl\nBr7szXBCglj6u8kg4qUKZ6GLJ9IuHJF2oksEENfZoQjxKII09fmjnFLFNoA86RYl\nk4D5XE8uIlHtbEd4UdsEgYCpVgds8Koi4qZBbzTOurXvPNHEVu7IEO0EJuVGJSz0\nZ7E4U9dXAgMBAAECggEAETjgXayv69r2klxuBPvvG7pFpdSw+6y0zymPWW6A5XDe\nqJsse4Hbf/K2lV4vF+Ul7bn5dlad5qnfryyblABwuUTEUpzdCL8qzetRugeGrFVk\nCTdPygqsNKnkdO16qsdMzt3Pn5XnADdWX3I8ilEbIMet41DVCjZZIgqq20FY0yrr\n6us1YsgMIDH4YRISI7pTnS7RfDkn5SrrWgHR48xJAcVGRu+xjGEzTvMmb4mBPLrH\nQefmvTHT1lqmuJ99YVPBkZcTL/bh5SbHz9quGevRKm5AYUmc54MkMYlF98U3Qo62\nH7h0n7SGBUR7aW/amVpk4sewMOkFosg9wEfa30FEeQKBgQD2DKZZ/3AUOy31jbS2\nIs6z1hZiGr1bfBEGvFI7KP9jBHNghe9FlrWeCfqW/KbXGYSG44cWnZlJgM/it4sE\nDiE233KHiwUcDQIsjcd40/MwNB/vEzO5cJ5XFEr4PH+8ZBy8HT9e7cQsVRolUMgD\n/tF/ykJwmOmKfWmPJ1ycp4AReQKBgQDmI9c8V2zsVdneyx1joFHYrew0BR8tW1wT\nwt62YpAEUck7hbZmXhWftcu8p3Dpq341rRIxJkRKjcWATkOxtw59tzPIovft4XQB\njBKh8hyDRzMD0cH26chpI47kKbYJn/MtIO+iaBMeVuUMHs04gwq8riOBNc2vXBOu\nq/8OnDBLTwKBgQCjOIMGAsiD8zoqwcVWacK7U9LnY5un26aj1DusmSbJtcMgDdlL\nTY3PeAkvLg0zde8PWFJd81AjjXraiC2FFCZ+cz5ToipSkGKX0bm4csnJeVqRyygt\n5QJ0+7Y79E48WCEjvTczrwDK8+1zQaJd3CV342GtthJ+13E2EMOD/C2d6QKBgCvy\nnjCMtWUwQ8my2erje524IMoSTFDaCGxRozwK+FuKzrXKI/nKb7CvA7gD9aD5ucFA\nSqAOIa5nAlctGuo9/ctuB7qBvHy1t/RvrkM0u9Mp7okFLlgbbsT9IFVbzcJqxAJT\nLs/BthzuFRFKdIAdLhi33FnZT2z0VWHewHcmxmYrAoGBAO/KZqkApn1uqOW6Aady\nORsjN6oapNX32Jav6dBL+Vj9FDgLOAUymECvzK/gNpmq2i+faKEDZsnYY7CTq1eX\nopc1E30zYk2E+V20wywkFcO0xFwTUnlz7Bc8CQYiHGzjp1TbMZqPem00jHQ+QkRW\nKXZD+BNc6anlmrL0fbfSwevL\n-----END PRIVATE KEY-----\n",
+  "client_email": "podcast-tts-serviceservice-acc@podcast-creator-475512.iam.gserviceaccount.com",
+  "client_id": "115320285545755367641",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/podcast-tts-serviceservice-acc%40podcast-creator-475512.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

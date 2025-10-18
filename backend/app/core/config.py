@@ -65,6 +65,9 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: Optional[str] = None
     ELEVENLABS_API_KEY: Optional[str] = None
     
+    # External API Services
+    GEONAMES_USERNAME: str = "demo"  # Free tier: 1000 requests/hour
+    
     @field_validator("SECRET_KEY")
     @classmethod
     def validate_secret_key(cls, v: str) -> str:

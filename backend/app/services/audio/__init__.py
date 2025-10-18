@@ -14,6 +14,8 @@ from .models import (
 from .tts_system import MultiTierTTSSystem
 from .audio_processor import AudioProcessingPipeline
 from .delivery_system import AudioDeliverySystem
+from .google_tts_service import google_tts_service, GoogleTTSService
+from .audio_service import audio_service, AudioService
 
 __all__ = [
     'TTSProvider',
@@ -24,5 +26,9 @@ __all__ = [
     'UserTier',
     'MultiTierTTSSystem',
     'AudioProcessingPipeline',
-    'AudioDeliverySystem'
+    'AudioDeliverySystem',
+    'google_tts_service',
+    'GoogleTTSService',
+    'audio_service',
+    'AudioService'
 ]
