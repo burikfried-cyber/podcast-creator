@@ -4,6 +4,10 @@ Handles audio synthesis using Google Cloud TTS API
 """
 import asyncio
 import time
+import os
+import base64
+import json
+import tempfile
 from typing import Dict, Optional, Any
 import structlog
 from concurrent.futures import ThreadPoolExecutor
@@ -47,6 +51,25 @@ class GoogleTTSService:
         # Initialize client if available
         if GOOGLE_TTS_AVAILABLE:
             try:
+                # Check for base64 encoded credentials (for Railway/cloud deployment)
+                base64_creds = os.getenv("GOOGLE_CREDENTIALS_BASE64")
+                
+                if base64_creds:
+                    # Decode base64 credentials and create temporary file
+                    logger.info("using_base64_credentials")
+                    creds_json = base64.b64decode(base64_creds).decode('utf-8')
+                    creds_dict = json.loads(creds_json)
+                    
+                    # Create temporary credentials file
+                    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+                        json.dump(creds_dict, f)
+                        temp_creds_path = f.name
+                    
+                    # Set environment variable to temp file
+                    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = temp_creds_path
+                    logger.info("google_tts_credentials_decoded", path=temp_creds_path)
+                
+                # Initialize client (will use GOOGLE_APPLICATION_CREDENTIALS or default)
                 self.client = texttospeech.TextToSpeechClient()
                 logger.info("google_tts_initialized", status="success")
             except Exception as e:
